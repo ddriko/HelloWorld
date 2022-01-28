@@ -56,9 +56,14 @@ ul{
 }
 
 .container .row .col-xs-12 .text h1{
+    display: flex;
     font-size: 63px;
-    margin: 20px auto 10px auto;
+    margin: 20px auto 10px 0;
+    border-right: 2px solid#3b3a3b ;
     color: #3b3a3b;
+
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .container .row .col-xs-12 .text p{
@@ -76,4 +81,26 @@ ul{
 
 .container .row .col-xs-12 .article h3{
     color: #3b3a3b;
+}
+
+.typing-animation {
+    animation: blinkCursor 1000ms steps(40) infinite normal, typing 3s steps(40) 1s normal both;
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 5.9em;
+    }
+    
+}
+@keyframes blinkCursor{
+    from {
+        border-right-color: #3b3a3b;
+    }
+    to {
+        border-right-color: transparent;
+    }
 }
